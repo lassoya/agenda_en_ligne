@@ -10,7 +10,7 @@
 
 
 ## Export SQL
- - [Agenda en ligne](cours/export_sql/agenda_en_ligne.sql)
+ - [Download `Agenda en ligne`](cours/export_sql/agenda_en_ligne.sql)
  - [Sakila schema](cours/export_sql/sakila-schema.sql)
  - [Sakila data](cours/export_sql/sakila-data.sql)
  - [Sakila MLD](cours/export_sql/sakila.mwb)
