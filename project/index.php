@@ -13,9 +13,22 @@ $requete->execute();
 //}
 
 // 2 eme solution pour récupérer des resultats
+?>
+<table border="1">
+  <tr>
+    <th>NOM</th>
+    <th>PRENOM</th>
+    <th>SUPPRIMER</th>
+  </tr>
+<?php
 while($client = $requete->fetch()){
-  echo $client['nom'] . ' ' . $client['prenom'].'<br />';
+  echo "<tr><td>".$client['nom'] . '</td><td>' . $client['prenom'].'</td>';
+  echo '<td><a href="supprimer.php">ici</a></td></tr>';
 }
+
+?>
+</table>
+<?php
 
 /*
 $client = $requete->fetch();
