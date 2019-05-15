@@ -6,5 +6,7 @@ if(isset($_GET['id'])) {
   $requete->execute([
     'id' => $_GET['id']
   ]);
-  print_r($requete->fetch(\PDO::FETCH_ASSOC));
+  $client = $requete->fetch();
+
+  include('formulaire.php');
 }
