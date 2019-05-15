@@ -18,12 +18,14 @@ $requete->execute();
   <tr>
     <th>NOM</th>
     <th>PRENOM</th>
+    <th>MODIFIER</th>
     <th>SUPPRIMER</th>
   </tr>
 <?php
 while($client = $requete->fetch()){
   echo "<tr><td>".$client['nom'] . '</td><td>' . $client['prenom'].'</td>';
-  echo '<td><a href="supprimer.php">ici</a></td></tr>';
+  echo '<td><a href="modifier.php?id='.$client['id'].'">ici</a></td>';
+  echo '<td><a href="supprimer.php?id='.$client['id'].'">ici</a></td></tr>';
 }
 
 ?>
