@@ -4,7 +4,7 @@ if(isset($_GET['id']) && $_POST){
   $requeteSave = $bdd->prepare('update client set '.
   'nom = :nom, prenom = :prenom, genre = :genre, date_de_naissance  = :date_de_naissance, '.
   ' email = :email, telephone = :telephone where id =:id');
-  
+
   $response = $requeteSave->execute([
     'nom' => $_POST['nom'],
     'prenom' => $_POST['prenom'],
@@ -31,4 +31,6 @@ if(isset($_GET['id'])) {
   $client = $requete->fetch();
 
   include('formulaire.php');
+
+echo "<a href='creation_adresse.php?id_client=" . $client['id']. "'>Ajouter une adresse</a>";
 }
