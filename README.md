@@ -3,6 +3,9 @@
 ## Cours
  - [Cours du 11/03/2019](cours/cours/courses_2019_03_11.md)
 
+ - [Cours du 28/05/2019](cours/cours/courses_2019_05_28.md)
+
+
 
 ## Exercices
  - [Requêtes du 11/03/2019](cours/exercices/request_2019_03_11.md)
