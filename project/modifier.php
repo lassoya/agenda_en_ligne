@@ -6,12 +6,12 @@ if(isset($_GET['id']) && $_POST){
   ' email = :email, telephone = :telephone where id =:id');
 
   $response = $requeteSave->execute([
-    'nom' => $_POST['nom'],
-    'prenom' => $_POST['prenom'],
-    'genre' => $_POST['genre'],
-    'date_de_naissance' => $_POST['date_de_naissance'],
-    'email' => $_POST['email'],
-    'telephone' => $_POST['telephone'],
+    'nom' => $_POST['nom'] ?? '',
+    'prenom' => $_POST['prenom'] ?? '',
+    'genre' => $_POST['genre'] ?? null,
+    'date_de_naissance' => $_POST['date_de_naissance'] ?? null,
+    'email' => $_POST['email'] ?? '',
+    'telephone' => $_POST['telephone'] ?? '',
     'id' => $_GET['id'],
   ]);
   if($response){
