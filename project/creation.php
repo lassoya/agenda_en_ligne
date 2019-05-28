@@ -1,6 +1,8 @@
 <?php
 require_once('connect.php');
 
+$messageErreur = null;
+
 if(isset($_POST['envoyer'])){
   $nom = isset($_POST['nom']) ? $_POST['nom'] : '';
   $prenom = isset($_POST['prenom']) ? $_POST['prenom'] : '';
@@ -30,8 +32,15 @@ if(isset($_POST['envoyer'])){
   if($succeed){
     echo "Enregistrement ok !";
   } else {
-    print_r($requete->errorInfo());
+    $error = $requete->errorInfo();
+    if($error[0]== 45000){
+      $messageErreur = $error[2];
+    } else {
+      print_r($error);
+    }
   }
 }
-
+if($messageErreur){
+  echo '<span style="color:red;font-weight: bold">'.$messageErreur."</span><br>";
+}
 include('formulaire.php');
